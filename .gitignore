@@ -1,0 +1,10 @@
+/.cache/
+/datasets/
+/2sf:10sf/
+/wandb/
+/tmp/
+/.idea/
+
+weights_convertion.py
+*.bin
+*.pyc
