@@ -4,7 +4,7 @@ Code for paper [NarrowBERT: Accelerating Masked Language Model Pretraining and I
 
 ## Dependencies
 
-This implementation is mainly based on [Huggingface Transformers](https://huggingface.co/docs/transformers/index) with optimization package [DeepSpeed](https://www.deepspeed.ai/). Please install these packages to get the most efficiency. 
+This implementation is mainly based on [Huggingface Transformers](https://huggingface.co/docs/transformers/index) with optimization package [DeepSpeed](https://www.deepspeed.ai/). Use ```./requirements.txt``` to make sure these packages are installed. 
 
 We provide a DeepSpeed example configuration ```./ds_zero2_1gpu.json```, and feel free to use your own. 
 
