@@ -1,38 +1,38 @@
 # NarrowBERT
 
-Code for paper [NarrowBERT: Accelerating Masked Language Model Pretraining and Inference](https://arxiv.org/abs/2301.04761).
+This reporsitory provides an implementation of the methods described in [NarrowBERT: Accelerating Masked Language Model Pretraining and Inference](https://arxiv.org/abs/2301.04761).
 
 ## Dependencies
 
-This implementation is mainly based on [Huggingface Transformers](https://huggingface.co/docs/transformers/index) with optimization package [DeepSpeed](https://www.deepspeed.ai/). Use ```./requirements.txt``` to make sure these packages are installed. 
+This implementation is mainly based on [Huggingface Transformers](https://huggingface.co/docs/transformers/index) with the optimization package [DeepSpeed](https://www.deepspeed.ai/). Use ```./requirements.txt``` to make sure these packages are installed. 
 
-We provide a DeepSpeed example configuration ```./ds_zero2_1gpu.json```, and feel free to use your own. 
+We provide a DeepSpeed example configuration ```./ds_zero2_1gpu.json```, but feel free to use your own. 
 
 ## Implementation
 
-Configuration and model implementation could be found within ```./narrowbert```. The code is mainly adapted from BERT provided on Huggingface. 
+Configuration and model implementation can be found within ```./narrowbert```. The code is mainly adapted from BERT provided on Huggingface. 
 
-We provide training scripts for all tasks we mentioned in the paper, but you can also grab the model and train with your own scripts. 
+We provide training scripts for all tasks we mentioned in the paper, but you can also take the model and train it with your own scripts. 
 
-We provide models for MLM pretraining, sequence classification, and for token classification, which are all we need for experiments mentioned in the paper. 
+We provide models for MLM pretraining, sequence classification, and token classification, which cover the experiments mentioned in the paper. 
 
-For tokenizer, we reuse BERT tokenizer provided on Huggingface. In all our experiments, we use pretrained tokenizer from ```bert-base-uncased```.
+For the tokenizer, we reuse the BERT tokenizer provided on Huggingface. In all of our experiments, we used the pretrained tokenizer from ```bert-base-uncased```.
 
 
 ## Pretraining
 
-```./run_mlm_narrowbert.py``` is the script for pretraining, and is adapted from Huggingface exampla ```run_mlm.py```. You can run it easily with command
+```./run_mlm_narrowbert.py``` is the script for pretraining, and is adapted from Huggingface exampla ```run_mlm.py```. You can run it with command
 
 ```
 python ./run_mlm_narrowbert.py ./run_mlm_config.json
 ```
 
-where ```./run_mlm_config.json``` includes hyperparameters that you can tweak on your own. 
+where ```./run_mlm_config.json``` contains the hyperparameters that were used. 
 
 
 ## GLUE/IMDB/Amazon Tests
 
-We adapt from Huggingface example ```run_glue.py``` and provide ```./run_glue_narrowbert.py``` with corresponding configurations. To run the script:
+We adapt the Huggingface example ```run_glue.py``` and provide ```./run_glue_narrowbert.py``` with the corresponding configuration. To run the script:
 
 ```
 python ./run_glue_narrowbert.py [config]
@@ -49,7 +49,7 @@ python ./amazon.py [cache_path] [amazon2_save_path] [amazon5_save_path]
 
 ## NER Tests
 
-We use ```./run_ner_narrowbert.pt```, which is, again, adapted from Huggingface example ```run_ner.py```. To run it:
+We use ```./run_ner_narrowbert.pt``` which is adapted from the Huggingface example ```run_ner.py```. To run it:
 
 ```
 python ./run_ner_narrowbert.py ./config_ner.json
