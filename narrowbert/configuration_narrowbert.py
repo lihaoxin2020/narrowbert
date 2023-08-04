@@ -27,6 +27,8 @@ class NarrowBertConfig(PretrainedConfig):
             Dimensionality of the encoder layers and the pooler layer.
         num_hidden_layers (`int`, *optional*, defaults to 12):
             Number of hidden layers in the Transformer encoder.
+        full_length_layers (`int`, *optional*, defaults to 2):
+            Number of fully contextualized attention layers.
         num_attention_heads (`int`, *optional*, defaults to 12):
             Number of attention heads for each attention layer in the Transformer encoder.
         intermediate_size (`int`, *optional*, defaults to 3072):
