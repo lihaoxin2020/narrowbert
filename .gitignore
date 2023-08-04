@@ -1,3 +1,5 @@
+.DS_Store
+
 /.cache/
 /datasets/
 /2sf:10sf/
@@ -8,3 +10,4 @@
 weights_convertion.py
 *.bin
 *.pyc
+*.zip

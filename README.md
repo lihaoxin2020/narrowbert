@@ -2,6 +2,8 @@
 
 This reporsitory provides an implementation of the methods described in [NarrowBERT: Accelerating Masked Language Model Pretraining and Inference](https://arxiv.org/abs/2301.04761).
 
+Pretrained and MNLI finetuned models could be downloaded [here](https://drive.google.com/drive/folders/1U5h-_G-M-q2JvLxZBsxNoN3wQ9dy0kIQ?usp=sharing).
+
 ## Dependencies
 
 This implementation is mainly based on [Huggingface Transformers](https://huggingface.co/docs/transformers/index) with the optimization package [DeepSpeed](https://www.deepspeed.ai/). Use ```./requirements.txt``` to make sure these packages are installed. 
